@@ -1,0 +1,16 @@
+:root {
+  --subtitle-font-family: "Inter", Helvetica;
+  --subtitle-font-weight: 400;
+  --subtitle-font-size: 32px;
+  --subtitle-letter-spacing: 0px;
+  --subtitle-line-height: 120.00000476837158%;
+  --subtitle-font-style: normal;
+  --title-hero-font-family: "Inter", Helvetica;
+  --title-hero-font-weight: 700;
+  --title-hero-font-size: 72px;
+  --title-hero-letter-spacing: -2.16px;
+  --title-hero-line-height: 120.00000476837158%;
+  --title-hero-font-style: normal;
+}
+
+

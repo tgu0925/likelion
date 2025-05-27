@@ -1,0 +1,508 @@
+#nav-bar {
+  background-color: rgb(248, 252, 255);
+  border-bottom: 1px solid rgb(219, 224, 255);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* 그림자 효과 */
+  margin: 0;
+  padding: 0;
+}
+
+
+#nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /*내용이 넘치면 숨김*/
+  overflow: hidden;
+}
+
+#nav-menu li {
+  float: left;
+  /*좌측 정렬*/
+}
+
+#nav-menu li a {
+  display: block;
+  /* 링크를 블록으로 */
+  text-align: center;
+  /*텍스트는 블록의 중심*/
+  padding: 14px 14px;
+  text-decoration: none;
+  /*링크의 밑줄 제거*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(65, 144, 255);
+  cursor: pointer;
+  margin: 0 20px;
+  font-size: large;
+  font-weight: bold;
+}
+
+#nav-menu li a:hover {
+  background-color: aliceblue;
+  color: rgb(3, 78, 184);
+  font-weight: bold;
+}
+
+/* 햄버거 메뉴 스타일 설정 */
+#hamburger-menu {
+  display: none;
+  /* 기본 상태에서는 햄버거 메뉴 숨김 */
+  cursor: pointer;
+  /* 마우스 오버 시 포인터 모양 변경 */
+  padding: 10px;
+}
+
+/* 햄버거 메뉴 아이콘 스타일 (세 개의 가로줄) */
+#hamburger-menu div {
+  width: 25px;
+  /* 가로줄 너비 */
+  height: 2px;
+  /* 가로줄 높이 */
+  background-color: rgb(65, 144, 255);
+  margin: 6px 0;
+  /* 상하 마진 설정 (줄 간격) */
+}
+
+/* 미디어 쿼리를 사용한 반응형 디자인 설정 */
+@media screen and (max-width: 600px) {
+  #nav-menu {
+    display: none;
+    /* 초기 상태에서는 숨김 */
+    width: 100%;
+    /* 메뉴바 전체 너비 */
+    background-color: rgb(248, 252, 255);
+    /* 배경색 */
+  }
+
+  #nav-menu li {
+    float: none;
+    /* 세로 정렬을 위해 float 제거 */
+    width: 100%;
+    /* 각 항목 전체 너비 */
+  }
+
+  #nav-menu li a {
+    text-align: left;
+    /* 텍스트 왼쪽 정렬 */
+  }
+
+  #hamburger-menu {
+    display: block;
+    /* 햄버거 메뉴 표시 */
+  }
+
+
+  #subtitle {
+    position: absolute;
+    width: 516px;
+    height: 38px;
+    left: 123px;
+    top: 249px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+    color: #000000;
+  }
+}
+
+.main {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  color: #929499;
+}
+
+.main .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.main .FE {
+  position: absolute;
+  top: 248px;
+  left: 123px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--subtitle-font-style);
+}
+
+.main .text-wrapper {
+  width: 903px;
+  top: 492px;
+  left: 123px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  position: absolute;
+  color: #000000;
+  font-style: var(--subtitle-font-style);
+}
+
+.main .mbti-INTP {
+  position: absolute;
+  width: 1214px;
+  top: 555px;
+  left: 123px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  font-style: var(--subtitle-font-style);
+}
+
+.main .overlap {
+  position: absolute;
+  width: 387px;
+  height: 98px;
+  top: 306px;
+  left: 122px;
+}
+
+.main .text-wrapper-2 {
+  top: 12px;
+  left: 0;
+  -webkit-text-stroke: 1px #000000;
+  font-family: var(--title-hero-font-family);
+  font-weight: var(--title-hero-font-weight);
+  font-size: var(--title-hero-font-size);
+  letter-spacing: var(--title-hero-letter-spacing);
+  line-height: var(--title-hero-line-height);
+  white-space: nowrap;
+  position: absolute;
+  color: #000000;
+  font-style: var(--title-hero-font-style);
+}
+
+.main .ellipse {
+  left: 28px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  background-color: #5bb0ff;
+  border-radius: 7px;
+}
+
+.main .ellipse-2 {
+  left: 87px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  background-color: #5bb0ff;
+  border-radius: 7px;
+}
+
+.main .ellipse-3 {
+  left: 146px;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 0;
+  background-color: #5bb0ff;
+  border-radius: 7px;
+}
+
+.main .kakaotalk {
+  position: absolute;
+  width: 318px;
+  height: 318px;
+  top: 148px;
+  left: 642px;
+  object-fit: cover;
+}
+
+.main .overlap-group {
+  position: absolute;
+  width: 1214px;
+  height: 38px;
+  top: 656px;
+  left: 123px;
+}
+
+.main .rectangle {
+  position: absolute;
+  width: 709px;
+  height: 33px;
+  top: 8px;
+  left: 128px;
+  background-color: #66ccff80;
+}
+
+.main .p {
+  width: 1214px;
+  top: 0;
+  left: 0;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  position: absolute;
+  color: #000000;
+  font-style: var(--subtitle-font-style);
+}
+
+.contact {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.contact .text-wrapper {
+  position: absolute;
+  width: 305px;
+  top: 609px;
+  left: 238px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  text-decoration: underline;
+  font-style: var(--subtitle-font-style);
+}
+
+.contact .text-wrapper-2 {
+  position: absolute;
+  top: 616px;
+  left: 598px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--subtitle-font-style);
+}
+
+.contact .p {
+  position: absolute;
+  top: 329px;
+  left: 336px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--subtitle-font-style);
+}
+
+.contact .text-wrapper-3 {
+  position: absolute;
+  top: 616px;
+  left: 959px;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--subtitle-font-style);
+}
+
+.contact .icon-mail {
+  top: 416px;
+  left: 322px;
+  position: absolute;
+  width: 133px;
+  height: 133px;
+}
+
+.contact .icon-chat {
+  top: 414px;
+  left: 986px;
+  background-image: url(./img/vector-3.svg);
+  background-size: 100% 100%;
+  position: absolute;
+  width: 133px;
+  height: 133px;
+}
+
+.contact .overlap-group {
+  position: relative;
+  width: 83px;
+  height: 91px;
+  top: 25px;
+  left: 25px;
+}
+
+.contact .vector {
+  position: absolute;
+  width: 83px;
+  height: 87px;
+  top: 4px;
+  left: 0;
+}
+
+.contact .img {
+  position: absolute;
+  width: 44px;
+  height: 87px;
+  top: 0;
+  left: 33px;
+}
+
+.contact .vector-2 {
+  position: absolute;
+  width: 83px;
+  height: 75px;
+  top: 0;
+  left: 0;
+}
+
+.contact .group {
+  position: absolute;
+  width: 42px;
+  height: 8px;
+  top: 33px;
+  left: 21px;
+}
+
+.contact .icon-phone {
+  top: 416px;
+  left: 654px;
+  position: absolute;
+  width: 133px;
+  height: 133px;
+}
+
+.about {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.about .div {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+}
+
+.about .overlap-group {
+  position: absolute;
+  width: 466px;
+  height: 38px;
+  top: 341px;
+  left: 449px;
+}
+
+.about .rectangle {
+  position: absolute;
+  width: 466px;
+  height: 33px;
+  top: 3px;
+  left: 0;
+  background-color: #66ccff80;
+}
+
+.about .text-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  white-space: nowrap;
+  font-style: var(--subtitle-font-style);
+}
+
+.about .element {
+  width: 250px;
+  top: 149px;
+  left: 443px;
+  position: absolute;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  font-style: var(--subtitle-font-style);
+}
+
+.about .text-wrapper-2 {
+  top: 213px;
+  left: 449px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  font-style: var(--subtitle-font-style);
+}
+
+.about .p {
+  top: 277px;
+  left: 449px;
+  white-space: nowrap;
+  position: absolute;
+  font-family: var(--subtitle-font-family);
+  font-weight: var(--subtitle-font-weight);
+  color: #000000;
+  font-size: var(--subtitle-font-size);
+  letter-spacing: var(--subtitle-letter-spacing);
+  line-height: var(--subtitle-line-height);
+  font-style: var(--subtitle-font-style);
+}
+
+.about .kakaotalk {
+  position: absolute;
+  width: 311px;
+  height: 415px;
+  top: 70px;
+  left: 73px;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 1000px) {
+
+  .main ,
+  .about,
+  .contact {
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: center;
+    width: 80vw;
+    height: 100vh;
+    padding-top: 5vw;
+  }
+}

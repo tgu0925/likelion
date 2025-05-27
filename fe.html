@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .title {
+            background-image: url("https://mblogthumb-phinf.pstatic.net/MjAyMTAyMDRfNjIg/MDAxNjEyNDA4OTk5NDQ4.6UGs399-0EXjIUwwWsYg7o66lDb-MPOVQ-zNDy1Wnnkg.m-WZz0IKKnc5OO2mjY5dOD-0VsfpXg7WVGgds6fKwnIg.JPEG.sunny_side_up12/1612312679152%EF%BC%8D2.jpg?type=w800");
+            color: white;
+            text-align: center;
+            width: 300px;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            padding-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        .left {
+
+            background-image: url("https://blog.kakaocdn.net/dn/bt45jV/btsI99MF4Vn/tetETrAoK7TIDkgq4IwAI1/img.webp");
+            width: 350px;
+            height: 600px;
+            background-size: cover;
+            padding-top: 30px;
+            background-position: center;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        .right {
+
+            background-image: url("https://img2.daumcdn.net/thumb/R658x0.q70/?fname=https://t1.daumcdn.net/news/202505/13/newsay/20250513180002697hqdk.jpg");
+            width: 350px;
+            height: 600px;
+            background-size: cover;
+            padding-top: 30px;
+            background-position: center;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+
+        .container {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .block-element {
+            width: 300px;
+            margin: 0px auto;
+        }
+
+        .pt-serif-regular {
+            font-family: "PT Serif", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .input {
+            width: 300px;
+            height: 20px;
+            border: 0;
+            border-radius: 15px;
+            outline: none;
+            background-color: rgb(233, 233, 233);
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left"></div>
+        <div class="block-element pt-serif-regular">
+            <div class="title">
+                <h1> 로그인 페이지 </h1>
+                <h5> 아이디, 비밀번호를 입력해주세요</h5>
+            </div>
+            <input type="text" id="username" placeholder="아이디" class="input"><br><br>
+            <input type="password" id="password" placeholder="비밀번호" class="input" onkeypress="enterKey();" ><br><br>
+            <button onclick="login()"> 로그인하기 </button>
+        </div>
+        <div class="right"></div>
+    </div>
+
+
+
+
+
+    <script>
+        function login() {
+            const id = document.getElementById("username").value;
+            const pw = document.getElementById("password").value;
+
+            const validId = "tgu0925";
+            const validPw = "dmsql0925@";
+
+
+            if (id === validId && pw === validPw) {
+                console.log('A key was pressed');
+
+                window.location.href = "main.html";
+
+            } else {
+                alert("아이디 또는 비밀번호가 잘못되었습니다.");
+            }
+        }
+
+        function enterKey() {
+            if (window.event.keyCode == 13) {
+                login();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
